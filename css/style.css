@@ -85,9 +85,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .checklist {
-  max-width: 300px;
+  max-width: 400px;
   margin: 0 auto;
   border: 1px dashed #000;
+  background-color: #fff;
 }
 
 .checklist__content {
@@ -109,7 +110,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .checklist__item {
   font-size: 16px;
-  padding: 0 0 15px 0;
+  padding: 0 0 20px 0;
 }
 
 .checklist__item:last-child {
@@ -127,6 +128,14 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.item__text {
+  word-wrap: break-word;
+  max-width: 300px;
 }
 
 .item__symbol {
@@ -137,6 +146,11 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  margin: 0 0 0 5px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .item__cross {
@@ -146,4 +160,9 @@ h1, h2, h3, h4, h5, h6 {
 .item__done {
   cursor: pointer;
   margin: 0 0 0 5px;
+}
+
+.item__text._done {
+  text-decoration: line-through;
+  opacity: 0.5;
 }
