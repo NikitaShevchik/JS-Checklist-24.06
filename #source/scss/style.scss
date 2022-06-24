@@ -1,0 +1,74 @@
+// Обнуление стилей
+@import "nullstyle.scss";
+// Подключение шрифтов
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap'); //font-family: 'Raleway', sans-serif;
+//SCSS
+.main {
+    font-family: 'Raleway', sans-serif; 
+}
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+.checklist {
+    max-width: 300px;
+    margin: 0 auto;
+    border: 1px dashed #000;
+		&__content {
+            padding: 20px;
+		}
+
+		&__header {
+		}
+
+		&__title {
+            font-size: 20px;
+            text-align: center;
+		}
+
+		&__input {
+            border: 1px solid #000;
+            margin: 15px 0;
+            font-size: 16px;
+            width: 100%;
+            padding: 5px;
+		}
+
+		&__main {
+		}
+
+		&__items {
+		}
+
+		&__item {
+            font-size: 16px;
+            padding: 0 0 15px 0;
+            &:last-child{
+                padding: 0;
+            }
+		}
+}
+
+
+.item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &__text {
+    }
+
+    &__symbol {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__cross {
+        cursor: pointer;
+    }
+
+    &__done {
+        cursor: pointer;
+        margin: 0 0 0 5px;
+    }
+}
