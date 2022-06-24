@@ -60,7 +60,11 @@
         word-wrap: break-word;
         max-width: 300px;
     }
-
+    &__edit{
+        border: 1px solid #000;
+        padding: 1px 5px;
+        font-size: 16px;
+    }
     &__symbol {
         display: flex;
         flex-direction: row;
@@ -81,4 +85,11 @@
 .item__text._done{
     text-decoration: line-through;
     opacity: 0.5;
+}
+
+.item__symbol._disabled{
+    .item__done{
+        opacity: 0.3;
+        cursor: not-allowed;
+    }
 }

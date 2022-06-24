@@ -138,6 +138,12 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 300px;
 }
 
+.item__edit {
+  border: 1px solid #000;
+  padding: 1px 5px;
+  font-size: 16px;
+}
+
 .item__symbol {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -165,4 +171,13 @@ h1, h2, h3, h4, h5, h6 {
 .item__text._done {
   text-decoration: line-through;
   opacity: 0.5;
+}
+
+.item__symbol._disabled .item__cross {
+  cursor: not-allowed;
+}
+
+.item__symbol._disabled .item__done {
+  opacity: 0.3;
+  cursor: not-allowed;
 }
