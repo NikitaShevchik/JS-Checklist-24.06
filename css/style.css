@@ -173,10 +173,6 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0.5;
 }
 
-.item__symbol._disabled .item__cross {
-  cursor: not-allowed;
-}
-
 .item__symbol._disabled .item__done {
   opacity: 0.3;
   cursor: not-allowed;

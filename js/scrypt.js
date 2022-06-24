@@ -36,11 +36,12 @@ function addCheckLine() {
         // })
 
         item.addEventListener('dblclick', function (e) {
-            var sybols = this.querySelector('.item__symbol');
-            sybols.classList.add('_disabled');
-            var text = item.querySelector('.item__text')
+            var text = item.querySelector('.item__text');
+            var oldText = text.innerHTML;
             if (e.target == text) {
-                text.innerHTML = `<input class="item__edit" value = ${text.innerHTML}>`;
+                var sybols = this.querySelector('.item__symbol');
+                sybols.classList.add('_disabled');
+                text.innerHTML = `<input class="item__edit" value = '${oldText}'>`;
                 this.querySelector('.item__edit').addEventListener('keyup', function (e) {
                     if (e.key == 'Enter') {
                         text.innerHTML = this.value;
@@ -49,9 +50,6 @@ function addCheckLine() {
                 })
             }
         })
-
-
-
 
         var itemSymbol = item.querySelector('.item__symbol')
 
